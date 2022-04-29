@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+
+<body>
+  <canvas id="draw" width="800" height="800"></canvas>
+  <script>
+    const canvas = document.getElementById('draw');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function draw(ctx) {
+      ctx.fillStyle = 'rgba(100, 10, 50)';
+      ctx.fillRect(25, 25, 100, 100);
+      ctx.fillStyle = 'rgba(50, 240, 180)';
+      ctx.fillRect(45, 45, 60, 60);
+      ctx.fillStyle = 'rgba(200, 120, 240)';
+      ctx.fillRect(50, 50, 50, 50);
+    }
+
+    draw(ctx);
+  </script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+  </style>
+
+</body>
+
+</html>
